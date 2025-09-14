@@ -1,0 +1,21 @@
+#Student name Cherise Kellman
+#Student ID u3167327
+#11 September 2025
+
+#Defining function which takes the inputs A, B and C and simulates the way circuit a and circuit b would work
+
+def case_study_three (A, B, C):
+    #Using the boolean expression for circuit a 
+    circuitA = int((A and not(not A and not C) and not B) or (A and C and B))
+    #Using the boolean expression for circuit b
+    circuitB = int((not B or C) and A)
+  # wrapping booleans in int to return 1 or 0 only for tests
+    print("The output of circuit (a) is ", circuitA)
+    print("The output of circuit (b) is ", circuitB)
+
+inputA = input("Please enter input for A, must be 1 for true and 0 for false: ")
+inputB = input("Please enter input for B, must be 1 for true and 0 for false: ")
+inputC = input("Please enter input for C, must be 1 for true and 0 for false: ")
+
+case_study_three(inputA, inputB, inputC)
+input()
