@@ -1,0 +1,46 @@
+3 documented test cases, please see screenshots in documents uploaded to canvas.
+
+Old code 1:
+def circuitA(A, B, C):
+    X = (A and not(not A and not C) and not B)
+    Y = (A and C and B)
+    return (X or Y)
+Old code 2:
+#Defining function which takes the inputs A, B and C and simulates the way circuit a and circuit b would work
+
+def case_study_three (A, B, C):
+    #Using the boolean expression for circuit a 
+    circuitA = (A and not(not A and not C) and not B) or (A and C and B)
+    #Using the boolean expression for circuit b
+    circuitB = (not B or C) and A
+    print("The output of circuit (a) is ", circuitA)
+    print("The output of circuit (b) is ", circuitB)
+
+
+Test Case #1
+- Handwritten expectation: Test using old code 1, take inputs and display outputs as listed in truth table.
+- Input(s): 1,0,0 & 0, 1, 1& 1, 1, 1 & 0, 0, 0
+- Workings: Called function circuitA, enter inputs
+- Expected output: Display 1 or True and 0 for False
+- Program run (screenshot or transcript):
+ 
+- Actual output: True, 0, 1, 0
+- Result: Fail, did not display only numeric outputs.
+Test Case #2
+- Handwritten expectation: Testing old code 2 with inputs representing behaviour of both circuit a and circuit b.
+- Input(s): 1, 1, 1 & 0, 0, 0 & 1, 0, 0
+- Workings: Called function case_study_three(), added values from truth table.
+- Expected output: Display 1 or True and 0 for False
+- Program run (screenshot or transcript):
+ 
+- Actual output: 1, 0, True and 1
+- Result: Fail, did not display only numeric outputs.
+Test Case #3
+- Handwritten expectation: Testing new with inputs representing behaviour of both circuit a and circuit b, wrapped in “int”.
+- Input(s): 1, 1, 1 & 0, 0, 0 & 1, 0, 0 & 0, 0, 1 & 0, 1, 0 & 0, 1, 1 & 1, 0, 1 & 1, 1, 0
+- Workings: Called function case_study_three(), added all values from truth table.
+- Expected output: Display 1 or True and 0 for False
+- Program run (screenshot or transcript):
+ 
+- Actual output: 1, 0, 1, 0, 0, 0, 1 & 0
+- Result: Pass, program displayed all expected outputs in numeric format.
