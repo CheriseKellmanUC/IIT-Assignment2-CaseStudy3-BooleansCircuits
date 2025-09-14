@@ -1,0 +1,5 @@
+Circuit (a):
+g = (A ∧ (A^ ∧ C^)^ ∧ B^) ∨ (A ∧ C ∧ B)
+
+Circuit (b):
+(B^ ∨ C) ∧ A 
